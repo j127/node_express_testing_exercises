@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "dev": "DEBUG=node-express-testing:* npm start"
+    "dev": "DEBUG=node-express-testing:* npm start",
+    "test": "mocha"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -14,5 +15,11 @@
     "hbs": "~4.0.1",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "cheerio": "^1.0.0-rc.2",
+    "mocha": "^5.0.5",
+    "supertest": "^3.0.0"
   }
 }
