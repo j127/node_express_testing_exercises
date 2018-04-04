@@ -1,5 +1,5 @@
 /**
- * Capitalize the first letter of a string and downcases the rest.
+ * Capitalize the first letter of a string and downcase the rest.
  *
  * @param {String} str
  */
