@@ -4,6 +4,15 @@ const chai = require('chai');
 const expect = chai.expect;
 
 describe('capitalize', () => {
+
+    // an example of code that runs before each test
+    // beforeEach(() => {
+    //     const thing = new Thing({
+    //         a: 123,
+    //         b: 456
+    //     });
+    // });
+
     it('capitalizes single words', () => {
         expect(capitalize('express')).to.equal('Express');
         expect(capitalize('cats')).to.equal('Cats');
@@ -30,5 +39,10 @@ describe('capitalize', () => {
     it('leaves already-capitalized words alone', () => {
         expect(capitalize('Express')).to.equal('Express');
         expect(capitalize('Node')).to.equal('Node');
+    });
+
+    it('throws an error if passed a number', () => {
+        // wrapped in a function to prevent an error from crashing the test
+        expect(() => capitalize(123)).to.throw(Error);
     });
 });
